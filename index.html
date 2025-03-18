@@ -209,8 +209,10 @@
          </header>
  
          <section class="about-text">
-            <p>Hi, I'm Syed Sana Ullah, a passionate graphic designer, web designer, and full-stack web developer. With a keen eye for detail and a love for creativity, I specialize in crafting visually stunning and user-friendly designs. My work goes beyond aesthetics—it's about creating meaningful experiences that captivate and engage users.</p>
+          <p>Hi, I'm Syed Sana Ullah, a passionate graphic designer, web designer, and full-stack web developer. With a keen eye for detail and a love for creativity, I specialize in crafting visually stunning and user-friendly designs. My work goes beyond aesthetics—it's about creating meaningful experiences that captivate and engage users.
 
+          </p><span class="read-more-btn" onclick="toggleText()">Read More...</span>
+          <div id="moreText" class="hidden-text" style="display: none;">
             <p>Currently, I am pursuing a Bachelor’s degree in Computer Science, where I am expanding my knowledge of programming, problem-solving, and software development. My studies complement my design expertise, allowing me to bridge the gap between creativity and technology, ensuring that every project is both visually appealing and technically robust.</p>
             
             <p>Beyond my expertise in design and development, I have a deep passion for traditional art, particularly pencil sketching. This artistic skill enhances my ability to conceptualize and bring unique perspectives to digital designs, making my work stand out with originality and precision.</p>
@@ -218,7 +220,10 @@
             <p>This is my very first portfolio, a space where I aim to showcase my skills and creative journey. While it is still a work in progress, I will soon be adding various projects and tools that reflect my expertise in design, development, and artistry. Every update will be a step towards refining and expanding my craft.</p>
             
             <p>I’m excited about the road ahead and eager to take on new challenges. If you're looking for a creative and technically skilled professional to bring your ideas to life, let's connect and create something extraordinary together!</p>
-            
+            <span class="read-less-btn" onclick="removeText()">Read Less</span>
+          </div>
+          
+        <button class="tool-btn" onclick="viewSec('resume')">View My Skills</button>
          </section>
  
  
@@ -967,7 +972,10 @@
         <header>
           <h2 class="h2 article-title">Tools</h2>
         </header>
-        
+                <div class="warning-box">
+          <p>Some Tools may not work. Trying to fix it. Scroll each box an use tools</p>
+        </div>
+
         <section class="tools-list project">
           
   <h4 class="h4 article-title testimonials-items-title">Unit Converters</h4>
