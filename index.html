@@ -5142,6 +5142,75 @@ for (let i = 0; i < toolsItem.length; i++) {
 // add click event to modal close button
 toolCloseBtn.addEventListener("click", toolsModalFunc);
 tooloverlay.addEventListener("click", toolsModalFunc);
+   const moreText = document.getElementById("moreText");
+            const btn = document.querySelector(".read-more-btn");
+            const btn2 = document.querySelector(".read-less-btn");
+            function toggleText() {
+                
+                
+                if (moreText.style.display === "none" || moreText.style.display === "") {
+                    moreText.style.display = "block";
+                    btn.style.display = "none";
+                    btn2.style.display = "block";
+                } 
+            }
+            function removeText() {
+                
+                
+                if (moreText.style.display === "block") {
+                    moreText.style.display = "none";
+                    btn.style.display = "block";
+                    btn2.style.display = "none";
+                } 
+            }
+  // <!-- change section on other that nav section buttons -->
+
+
+// Page navigation variables  
+const navigationLins = document.querySelectorAll("[data-nav-link]");  
+const pags = document.querySelectorAll("[data-page]");  
+
+// Function to handle section switching  
+function showSection(sectionName) {  
+for (let i = 0; i < pags.length; i++) {  
+if (pags[i].dataset.page === sectionName) {  
+ pags[i].classList.add("active");  
+ pags[i].style.display = "block";  
+ if (navigationLins[i]) {  
+   navigationLins[i].classList.add("active");  
+ }  
+} else {  
+ pags[i].classList.remove("active");  
+ pags[i].style.display = "none";  
+ if (navigationLins[i]) {  
+   navigationLins[i].classList.remove("active");  
+ }  
+}  
+}  
+}  
+
+// Add event listener to all navbar links  
+for (let i = 0; i < navigationLins.length; i++) {  
+navigationLins[i].addEventListener("click", function () {  
+const sectionName = this.innerHTML.toLowerCase();  
+showSection(sectionName);  
+window.scrollTo(0, 0); // Ensure smooth scrolling to top when switching  
+});  
+};  
+
+// Function to open resume and scroll to skills  
+function viewSec(sectionName) {  
+showSection(sectionName);  
+
+if (sectionName === 'resume') {
+setTimeout(() => {  
+const targetElement = document.querySelector("#skills");  
+if (targetElement) {  
+ targetElement.scrollIntoView({ behavior: "smooth", block: "start" });  
+}  
+}, 100);
+}  
+}
  </script>
    <!--  
      - ionicon link
