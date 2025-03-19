@@ -24,16 +24,24 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
+   
  </head>
  
  <body>
+  <div class="loader">
+    <div class="loader-balls"></div>
+    <div class="loader-p">Loading little wait...</div>
+  </div>
+  
+
  
-   <!--
-     - #MAIN data-page
-   -->
+
+
+
+
  
-   <main>
- 
+   <main class="main appear">
+    
      <!--
        - #SIDEBAR
      -->
@@ -585,7 +593,7 @@
             </ol>
         </section>
      
-        <section class="skill">
+        <section id="skills" class="skill">
             <h3 class="h3 skills-title">My Skills</h3>
             <ul class="skills-list content-card">
                 <li class="skills-item">
@@ -973,8 +981,7 @@
           <h2 class="h2 article-title">Tools</h2>
         </header>
                 <div class="warning-box">
-          <p>Some Tools may not work. Trying to fix it. Scroll each box an use tools</p>
-          
+          <p>Some Tools may not work, Trying to fix it. Scroll each box horizontally and use tools</p>
         </div>
 
         <section class="tools-list project">
@@ -5213,6 +5220,28 @@ if (targetElement) {
 }  
 }
  </script>
+ <script>
+  window.addEventListener('load', function () {
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
+
+// Check internet connection
+function checkInternetConnection() {
+  return navigator.onLine;
+}
+
+
+setTimeout(() => {
+  if (checkInternetConnection()) {
+    loader.style.display = 'none';
+    main.classList.remove('appear');
+  } else {
+    const loaderP = document.querySelector('.loader-p');
+    loaderP.innerHTML = 'No internet connection';
+  }
+}, 2000);
+});
+</script>
    <!--  
      - ionicon link
    -->
