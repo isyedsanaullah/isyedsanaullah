@@ -1654,5 +1654,3 @@ box-shadow: 0 0 5px var(--orange-yellow-crayola); /* Example focus effect */
 font-size: 25px;
 color: hsl(203, 100%, 72%);
 }
-display: flex; flex-direction: column; align-items: center; justify-content: center; 
-.social-link
