@@ -497,18 +497,24 @@ img{
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  gap: 25px;
-  padding-bottom: 4px;
-  padding-left: 7px;
+  gap: 4px;
+  padding: 4px;
+
 }
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 28px;
+  font-size: 38px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
-
+.social-link p{
+  font-size: 10px;
+}
 .social-item .social-link:hover { color: var(--light-gray); }
 
 .navbar {
@@ -1648,3 +1654,5 @@ box-shadow: 0 0 5px var(--orange-yellow-crayola); /* Example focus effect */
 font-size: 25px;
 color: hsl(203, 100%, 72%);
 }
+display: flex; flex-direction: column; align-items: center; justify-content: center; 
+.social-link
